@@ -63,7 +63,7 @@ pipeline {
                                         remoteDirectory: '.',
                                         remoteDirectorySDF: false,
                                         removePrefix: '',
-                                        sourceFiles: 'insurance-kdeploy.yml'
+                                        sourceFiles: 'kdeploy.yml'
                                     )
                                 ],
                                 usePromotionTimestamp: false,
