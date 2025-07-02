@@ -1,0 +1,24 @@
+---
+- name: Install Git, OpenJDK 17, Docker, and Maven
+  hosts: jslave
+  become: yes
+
+  tasks:
+    - name: Update APT cache
+      apt:
+        update_cache: yes
+
+    - name: Install required packages
+      apt:
+        name:
+          - git
+          - openjdk-17-jre
+          - docker.io
+          - maven
+        state: present
+
+    - name: Enable and start Docker service
+      systemd:
+        name: docker
+        enabled: yes
+        state: started
