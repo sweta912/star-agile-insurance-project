@@ -54,7 +54,7 @@ pipeline {
                                     sshTransfer(
                                         cleanRemote: false,
                                         excludes: '',
-                                        execCommand: 'kubectl apply -f insurance-kdeploy.yml',
+                                        execCommand: 'kubectl apply -f kdeploy.yml',
                                         execTimeout: 120000,
                                         flatten: false,
                                         makeEmptyDirs: false,
